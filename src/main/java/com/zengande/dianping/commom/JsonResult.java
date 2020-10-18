@@ -35,27 +35,30 @@ public class JsonResult {
 
     /**
      * 返回成功结果
+     *
      * @param data 数据
      * @return JsonResult 对象
      */
     public static JsonResult success(Object data) {
-        ResultStateCode success = ResultStateCode.SUCCESS;
-        return create(data, success.getCode(),success.getMessage());
+        JsonResultCode success = JsonResultCode.SUCCESS;
+        return create(data, success.getCode(), success.getMessage());
     }
 
     /**
      * 返回错误结果
+     *
      * @param error
      * @return
      */
-    public static JsonResult fail(ResultStateCode error){
-        return  create(null, error.getCode(), error.getMessage());
+    public static JsonResult fail(JsonResultCode error) {
+        return create(null, error.getCode(), error.getMessage());
     }
 
     /**
      * 构建 JsonResult 对象
-     * @param data 数据
-     * @param code 状态码
+     *
+     * @param data    数据
+     * @param code    状态码
      * @param message 消息
      * @return
      */

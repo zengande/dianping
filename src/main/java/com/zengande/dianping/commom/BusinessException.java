@@ -7,7 +7,7 @@ public class BusinessException extends Exception {
 
     private JsonResult result;
 
-    public BusinessException(ResultStateCode error) {
+    public BusinessException(JsonResultCode error) {
         super();
 
         this.result = JsonResult.fail(error);

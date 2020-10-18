@@ -1,6 +1,6 @@
 package com.zengande.dianping.commom;
 
-public enum ResultStateCode {
+public enum JsonResultCode {
 
     SUCCESS(10000, "成功"),
     REQUEST_OBJECT_NOTFOUND(10001, "请求对象不存在"),
@@ -12,7 +12,7 @@ public enum ResultStateCode {
     private Integer code;
     private String message;
 
-    ResultStateCode(Integer code, String message) {
+    JsonResultCode(Integer code, String message) {
         this.code = code;
         this.message = message;
     }
